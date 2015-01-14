@@ -1,3 +1,5 @@
+class Fz01
+  def calc
     (1..100).each do |num|
       if num % 15 == 0
         puts "FizzBuzz"
@@ -9,4 +11,5 @@
         puts num
       end
     end
-
+  end
+end
