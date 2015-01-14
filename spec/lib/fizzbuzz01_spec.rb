@@ -3,7 +3,7 @@ require 'fizzbuzz01'
 
 describe Fizzbuzz01 do
   describe 'モジュールメソッド' do
-    describe '#calc' do
+    describe '#calc(n, m)' do
       context '引数が不正な場合' do
         it '引数がなければArgumentErrorをあげる' do
           expect { described_class.calc }.to raise_error ArgumentError
@@ -98,16 +98,17 @@ describe Fizzbuzz01 do
       end
     end
 
-    describe '#puts_puts_num(num)'
-    context '引数が正しい場合' do
-      it '引数がない場合ArgumentErrorをあげる' do
-        expect { described_class.puts_num }.to raise_error ArgumentError
+    describe '#puts_puts_num(num)' do
+      context '引数が正しい場合' do
+        it '引数がない場合ArgumentErrorをあげる' do
+          expect { described_class.puts_num }.to raise_error ArgumentError
+        end
       end
-    end
 
-    context '引数が正しくない場合' do
-      it '標準出力に引数を出力する' do
-        expect { described_class.puts_num(3) }.to output("3\n").to_stdout
+      context '引数が正しくない場合' do
+        it '標準出力に引数を出力する' do
+          expect { described_class.puts_num(3) }.to output("3\n").to_stdout
+        end
       end
     end
   end
