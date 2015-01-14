@@ -1,5 +1,5 @@
-require "spec_helper"
-require "fizzbuzz01"
+require 'spec_helper'
+require 'fizzbuzz01'
 
 describe Fizzbuzz01 do
   describe 'モジュールメソッド' do
@@ -80,7 +80,9 @@ describe Fizzbuzz01 do
 
     describe '#puts_fizz_buzz' do
       it '標準出力にFizzBuzzを出力する' do
-        expect { described_class.puts_fizz_buzz }.to output("FizzBuzz\n").to_stdout
+        expect do
+          described_class.puts_fizz_buzz
+        end.to output("FizzBuzz\n").to_stdout
       end
     end
 

@@ -1,7 +1,6 @@
 module Fizzbuzz01
-
   module ModuleMethods
-    def calc(n,m)
+    def calc(n, m)
       fail TypeError unless n.is_a? Integer
       fail TypeError unless m.is_a? Integer
       n.upto(m).each { |num| distribute num }
@@ -23,7 +22,7 @@ module Fizzbuzz01
     end
 
     def puts_fizz
-      puts "Fizz"
+      puts 'Fizz'
     end
 
     def puts_num(num)
