@@ -21,8 +21,8 @@ describe Fizzbuzz01 do
           expect(described_class).to receive(:distribute).with(1)
           expect(described_class).to receive(:distribute).with(2)
           expect(described_class).to receive(:distribute).with(3)
-          expect(described_class).not_to receive(:distribute).with(3)
-
+          expect(described_class).not_to receive(:distribute).with(4)
+          expect(described_class).not_to receive(:distribute).with(5)
           described_class.calc(0, 3)
         end
       end
